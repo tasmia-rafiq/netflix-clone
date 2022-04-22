@@ -1,0 +1,425 @@
+:root{
+	--primary-color: #e50914;
+	--dark-color: #141414;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	background: #444;
+	color: #999;
+}
+
+img{
+    width: 100%;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul{
+    text-decoration: none;
+    list-style:none;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+    padding: 7.8px 20px;
+	margin-right: 0.5rem;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+}
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.container{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+    overflow: hidden;
+    color: #fff;
+}
+
+/*------------ Showcase -----------*/
+#showcase {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: url('../images/background.jpg') no-repeat center/cover;
+}
+
+/*this will add overlay to the background pic */
+#showcase::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0,0,0, 0.6);
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+#showcase .showcase-top {
+    position: relative;
+    height: 90px;
+    z-index: 2;
+}
+
+#showcase .showcase-top img{
+    position: absolute;
+    width: 165px;
+    top: 50%;
+    left: 9%;
+    transform: translate(-50%, -50%);
+}
+
+#showcase .showcase-top a{
+	position: absolute;
+	top: 50%;
+	right: 0%;
+	transform: translate(-50%,-50%);
+}
+
+#showcase .showcase-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 6.5rem;
+    color: #fff;
+}
+
+.showcase-content h1{
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding: 0 25rem;
+}
+
+.showcase-content h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: -1rem;
+}
+
+.showcase-content p {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.showcase-content form{
+    float: right;
+	margin-top: 6px;
+}
+
+.showcase-content input[type="email"]{
+    font-size: 16px;
+    padding: 10px;
+	height: 35px;
+	width: 400px;
+}
+
+.showcase-content a{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+	height: 45px;
+    width:170px ;
+    border: 0;
+    padding-top: 10px;
+    margin-left: -0.2rem;
+    padding: 0.7rem 1rem;
+    padding-bottom: 0.2rem;
+}
+
+/*----------- TV Section ----------*/
+#tv-section{
+    margin: 7px 0;
+    background: #000;
+    padding: 5.5rem 0;
+    text-align: left;
+}
+
+#tv-section .tv-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#tv-section h1{
+    margin-top: -30px;
+    font-size: 3rem;
+    text-align: left;
+}
+
+#tv-section p{
+    margin-top: -20px;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+/*----------- Download Section -----------*/
+#download-section{
+    margin: 7px 0;
+    background: #000;
+    padding: 5.5rem 0;
+    text-align: left;
+}
+
+#download-section .download-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -1rem;
+}
+
+#download-section h1{
+    margin-top: -30px;
+    font-size: 3rem;
+    text-align: left;
+}
+
+#download-section p{
+    margin-top: -20px;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.download-section-content img {
+    margin-left: -15rem;
+    width: 18rem;
+    height: 20rem;
+}
+
+/*----------- Watch Everywhere Section ----------*/
+#watch-section {
+    margin: 7px 0;
+    background: #000;
+    padding: 1.4rem 0;
+    text-align: center;
+}
+
+#watch-section .watch-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+#watch-section h1{
+    font-size: 3rem;
+    text-align: left;
+}
+
+#watch-section p{
+    margin-top: -20px;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+/*----------- Kids Section -----------*/
+#kids-section {
+    margin: 7px 0;
+    padding: 5rem 0;
+    background: #000;
+    text-align: center;
+}
+
+#kids-section .kids-section-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.kids-section-content h1 {
+    margin-top: -20px;
+    font-size: 3rem;
+    text-align: left;
+}
+
+.kids-section-content p {
+    margin-top: -20px;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+/*---------- FAQ Section ----------*/
+#faq-section {
+    margin: 7px 0;
+    padding: 5.5rem 0;
+    background: #000;
+    text-align: center;
+}
+
+#faq-section .faq-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 800px;
+    background: #000;
+    margin-left: 150px;
+}
+
+#faq-section h2{
+    margin-top: -8px;
+    font-size: 3.1rem;
+    font-weight: 700;
+}
+
+.faq-section-content .accordion {
+    width: 800px;
+}
+
+.faq-section-content .accordion .contentBx{
+    position: relative;
+    margin: 10px 0;
+}
+
+.faq-section-content .accordion .contentBx .label {
+    position: relative;
+    padding: 25px;
+    background: #2b2b2b;
+    color: #fff;
+    cursor: pointer;
+    font-size: 28px;
+    text-align: left;
+}
+
+.faq-section-content .accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translate(-50%);
+    font-size: 38px;
+    font-weight: 100;
+}
+
+.faq-section-content .accordion .contentBx.active .label::before {
+    content: '-';
+    position: absolute;
+    top: 10%;
+    right: 25px;
+    transform: translate(-50%);
+    font-size: 48px;
+    font-weight: 100;
+}
+
+.faq-section-content .accordion .contentBx .content {
+    position: relative;
+    margin-top: 1px;
+    background: #2b2b2b;
+    color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.faq-section-content .accordion .contentBx .content p{
+    margin-left: 20px;
+    font-size: 26px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/*for opening the faq sections*/
+.faq-section-content .accordion .contentBx.active .content {
+    height: auto;
+    padding: 10px 20px;
+}
+
+/*faq section footer */
+
+.faq-section-footer {
+    margin-top: 4rem;
+}
+.faq-section-footer p{
+    font-size: 1.2rem;
+}
+
+.faq-section-footer form{
+	margin-top: 20px;
+}
+
+.faq-section-footer input[type="email"]{
+    font-size: 16px;
+    padding: 10px;
+	height: 35px;
+	width: 400px;
+}
+
+.faq-section-footer a{
+    font-size: 25px;
+    text-align: center;
+    justify-content: center;
+	height: 45px;
+    width:170px ;
+    border: 0;
+    padding-top: 10px;
+    margin-left: -0.2rem;
+    padding: 0.7rem 1rem;
+    padding-bottom: 0.2rem;
+}
+
+/*------------ Footer Section ------------*/
+.footer{
+    margin: 7px 0;
+    padding: 3rem 14rem;
+    background: #000;
+}
+
+.footer, .footer a{
+	color: #999;
+	font-size: 0.8rem;
+}
+
+.footer p{
+    margin-left: 2.3rem;
+    font-size: 18px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: -10px;
+}
+
+.footer .footer-cols{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 2rem;
+}
+
+.footer li{
+	line-height: 2.5;
+}
